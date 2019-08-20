@@ -1,0 +1,39 @@
+.nav-bar {
+    margin: 10px;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+.link {
+    position: relative;
+    display: inline-block;
+    color: #666;
+    text-decoration: none;
+    padding-bottom: 6px;
+    @extend %transition;
+
+    &:not(:last-child) {
+        margin-right: 1em;
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 0;
+        height: 3px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $main-color;
+        @extend %transition;
+    }
+}
+
+.active {
+    color: $main-color;
+
+    &::after {
+        width: 100%;
+    }
+}
