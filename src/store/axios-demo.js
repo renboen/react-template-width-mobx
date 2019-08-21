@@ -13,12 +13,20 @@ configure({ enforceActions: 'observed' })
 class AxiosDemo extends StoreModule {
     @observable
     list = []
-
+    @action
+    doub = () => {
+        return new Promise((res, rej) => {
+            setTimeout(() => {
+                res([{ title: '一个action里面调用另一个action' }])
+            }, 1000)
+        })
+    }
     @action
     getList = async () => {
         try {
+            const an = await this.doub();
             const res = await get('/topics')
-            res.success && this.setState({ list: res.data })
+            res.success && this.setState({ list: [...an, ...res.data] })
         } catch (err) {
             console.error(err)
         }

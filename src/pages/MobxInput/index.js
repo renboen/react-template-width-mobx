@@ -12,13 +12,13 @@ import { Input, Button } from 'antd'
 @observer
 class MobxInput extends Component {
     render() {
-        const { msg, handleChangeMsg, handleReset, } = this.props.Test
+        const { msg, handleChangeMsg, handleReset, delMsg } = this.props.Test;
         return (
             <div className="container">
                 <h1>mobx input module.</h1>
                 <Button onClick={handleReset}>reset</Button>
                 <Input size="large" placeholder="enter your text" value={msg} onChange={handleChangeMsg} />
-                <h2>Store Text: {msg}</h2>
+                <h2>Store Text: {delMsg}</h2>
             </div>
         )
     }

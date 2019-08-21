@@ -1,5 +1,5 @@
 > 构建一个通用的 react 项目架构模板
-
+## 常见问题https://blog.csdn.net/smk108/article/details/89681367
 ## 1.使用`create-react-app`新建项目.
 
 ## 2.删除多余文件,保留`App.js`和`index.js`即可.
