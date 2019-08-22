@@ -7,7 +7,6 @@
 import React, { Component } from 'react'
 import { inject, observer } from 'mobx-react'
 import { Input, Button } from 'antd'
-
 @inject('Test')
 @observer
 class MobxInput extends Component {

@@ -5,14 +5,14 @@
  */
 
 import { observable, action, configure } from 'mobx'
-import { StoreModule } from '@/utils/mobx-store'
+import { Module } from '@/utils/mobx-store'
 import { get } from '@/utils/axios'
 
 configure({ enforceActions: 'observed' })
 
-class AxiosDemo extends StoreModule {
+class AxiosDemo extends Module {
     @observable
-    list = []
+    list = [{ title: '一个action里面调用另一个action' }]
     @action
     doub = () => {
         return new Promise((res, rej) => {

@@ -6,11 +6,11 @@
  */
 
 import { observable, action, configure, computed } from 'mobx'
-import { StoreModule } from '@/utils/mobx-store'
+import { Module } from '@/utils/mobx-store'
 
 configure({ enforceActions: 'observed' })
 
-class Test extends StoreModule {
+class Test extends Module {
     @observable
     msg = ''
     @computed

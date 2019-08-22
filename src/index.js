@@ -5,7 +5,7 @@ import { Provider } from 'mobx-react'
 import store from './store'
 import App from './App'
 
-console.log(store)
+// console.log(store)
 
 ReactDOM.render(
     <Provider {...store}>
